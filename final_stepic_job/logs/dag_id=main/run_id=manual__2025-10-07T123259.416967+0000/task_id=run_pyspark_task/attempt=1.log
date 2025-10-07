@@ -1,0 +1,94 @@
+[2025-10-07T12:33:01.595+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-07T12:33:01.609+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.run_pyspark_task manual__2025-10-07T12:32:59.416967+00:00 [queued]>
+[2025-10-07T12:33:01.615+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.run_pyspark_task manual__2025-10-07T12:32:59.416967+00:00 [queued]>
+[2025-10-07T12:33:01.615+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-07T12:33:01.626+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_pyspark_task> on 2025-10-07 12:32:59.416967+00:00
+[2025-10-07T12:33:01.631+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3931) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-10-07T12:33:01.633+0000] {standard_task_runner.py:63} INFO - Started process 3933 to run task
+[2025-10-07T12:33:01.633+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'main', 'run_pyspark_task', 'manual__2025-10-07T12:32:59.416967+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp7_zhy5jx']
+[2025-10-07T12:33:01.634+0000] {standard_task_runner.py:91} INFO - Job 172: Subtask run_pyspark_task
+[2025-10-07T12:33:01.666+0000] {task_command.py:426} INFO - Running <TaskInstance: main.run_pyspark_task manual__2025-10-07T12:32:59.416967+00:00 [running]> on host 5adecdfd8c83
+[2025-10-07T12:33:01.724+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='run_pyspark_task' AIRFLOW_CTX_EXECUTION_DATE='2025-10-07T12:32:59.416967+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-07T12:32:59.416967+00:00'
+[2025-10-07T12:33:01.725+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-07T12:33:13.819+0000] {logging_mixin.py:188} INFO - +--------+------------------+------------------+----------------+--------+----------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+
+|house_id|          latitude|         longitude|maintenance_year|  square|population|             region|       locality_name|             address|        full_address|communal_service_id|         description|
++--------+------------------+------------------+----------------+--------+----------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+
+|       1|         44.707617|         43.006476|            1974|2 661.10|        89|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                1.0|Жилой дом в , по ...|
+|       2|44.706720000000004|         43.005281|            1989|3 111.10|       115|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                1.0|Жилой дом в , по ...|
+|       3|         44.708302|43.006665000000005|            1977|2 896.04|        89|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                1.0|Жилой дом в , по ...|
+|       5|44.711946999999995|          42.97358|            1978|1 061.92|        26|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                1.0|Жилой дом в , по ...|
+|       6|         44.707751|         43.005515|            1978|2 688.70|       105|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                2.0|Жилой дом в , по ...|
+|       7|44.711946999999995|          42.97358|            1973|  854.90|        40|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                3.0|Жилой дом в , по ...|
+|       8|44.723622999999996|         42.996864|            1978|  924.40|        31|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                4.0|Жилой дом в , по ...|
+|       9|44.721765999999995|          43.02013|            1974|1 011.30|        38|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                5.0|Жилой дом в , по ...|
+|      10|         44.710557|         43.000278|            1963|  621.21|        20|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                6.0|Жилой дом в , по ...|
+|      11|44.724903999999995|         43.003359|            1972|  681.60|        26|Ставропольский край|село Александровское|с. Александровско...|Ставропольский кр...|                7.0|Жилой дом в , по ...|
++--------+------------------+------------------+----------------+--------+----------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+
+only showing top 10 rows
+[2025-10-07T12:33:21.715+0000] {logging_mixin.py:188} INFO - Количество строк загруженных из файла 507914
+[2025-10-07T12:33:21.717+0000] {logging_mixin.py:188} INFO - root
+ |-- house_id: integer (nullable = true)
+ |-- latitude: double (nullable = true)
+ |-- longitude: double (nullable = true)
+ |-- maintenance_year: string (nullable = true)
+ |-- square: string (nullable = true)
+ |-- population: string (nullable = true)
+ |-- region: string (nullable = true)
+ |-- locality_name: string (nullable = true)
+ |-- address: string (nullable = true)
+ |-- full_address: string (nullable = true)
+ |-- communal_service_id: string (nullable = true)
+ |-- description: string (nullable = true)
+[2025-10-07T12:33:21.779+0000] {logging_mixin.py:188} INFO - root
+ |-- house_id: integer (nullable = true)
+ |-- latitude: float (nullable = true)
+ |-- longitude: float (nullable = true)
+ |-- maintenance_year: integer (nullable = false)
+ |-- square: float (nullable = false)
+ |-- population: integer (nullable = false)
+ |-- region: string (nullable = true)
+ |-- locality_name: string (nullable = true)
+ |-- address: string (nullable = true)
+ |-- full_address: string (nullable = true)
+ |-- communal_service_id: integer (nullable = false)
+ |-- description: string (nullable = true)
+[2025-10-07T12:33:21.779+0000] {logging_mixin.py:188} INFO - Данные успешно записаны в таблицу city_house
+[2025-10-07T12:33:22.018+0000] {logging_mixin.py:188} INFO - Данные из ClickHouse, топ 25 домов, у которых площадь больше 60 кв.м
+[2025-10-07T12:33:22.448+0000] {logging_mixin.py:188} INFO - +--------------------+---------+
+|             address|   square|
++--------------------+---------+
+|мкр. Дубрава квар...|7058900.0|
+|мкр. Дубрава квар...|6966720.0|
+|ул. Солнечная 2-я...|3652010.0|
+|  ул. Токарей, д. 68|1879860.0|
+|ул. Старый Гай, д. 6| 883057.4|
+|пр-кт. Победы, д. 18| 646910.0|
+|с. Филимоново, ул...| 452520.0|
+|с. Филимоново, ул...| 448666.0|
+|с. Филимоново, ул...| 441713.0|
+|с. Филимоново, ул...| 441350.0|
+|пгт. Февральск, у...| 429720.0|
+|ул. Пионерская, д. 3| 410203.8|
+|пер. Трехгорный Б...| 383408.0|
+|ул. Подольских Ку...| 335259.0|
+|ул. Свердлова, д....| 313165.6|
+|с. Филимоново, ул...| 270929.0|
+|ул. Баныкина, д. 16В| 259491.0|
+|наб. Академика Ту...| 214075.5|
+|с. Филимоново, ул...| 212432.0|
+|б-р. Маршала Роко...| 202347.1|
+|ул. Маршала Савиц...| 202034.0|
+|ул. Звездинка, д....| 199115.0|
+| ул. Урывского, д. 9| 198476.7|
+|ш. Хорошевское, д...| 198275.3|
+|ул. 40 лет Победы...| 197757.0|
++--------------------+---------+
+only showing top 25 rows
+[2025-10-07T12:33:22.692+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-10-07T12:33:22.693+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-07T12:33:22.699+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=main, task_id=run_pyspark_task, run_id=manual__2025-10-07T12:32:59.416967+00:00, execution_date=20251007T123259, start_date=20251007T123301, end_date=20251007T123322
+[2025-10-07T12:33:22.748+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-10-07T12:33:22.759+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-07T12:33:22.762+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

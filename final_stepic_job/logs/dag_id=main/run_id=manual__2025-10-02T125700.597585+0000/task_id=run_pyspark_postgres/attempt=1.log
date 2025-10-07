@@ -1,0 +1,25 @@
+[2025-10-02T12:57:01.876+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-10-02T12:57:01.894+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: main.run_pyspark_postgres manual__2025-10-02T12:57:00.597585+00:00 [queued]>
+[2025-10-02T12:57:01.900+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: main.run_pyspark_postgres manual__2025-10-02T12:57:00.597585+00:00 [queued]>
+[2025-10-02T12:57:01.901+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-10-02T12:57:01.912+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): run_pyspark_postgres> on 2025-10-02 12:57:00.597585+00:00
+[2025-10-02T12:57:01.917+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=6524) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-10-02T12:57:01.918+0000] {standard_task_runner.py:63} INFO - Started process 6525 to run task
+[2025-10-02T12:57:01.919+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'main', 'run_pyspark_postgres', 'manual__2025-10-02T12:57:00.597585+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpssjpazu1']
+[2025-10-02T12:57:01.920+0000] {standard_task_runner.py:91} INFO - Job 89: Subtask run_pyspark_postgres
+[2025-10-02T12:57:01.954+0000] {task_command.py:426} INFO - Running <TaskInstance: main.run_pyspark_postgres manual__2025-10-02T12:57:00.597585+00:00 [running]> on host 5adecdfd8c83
+[2025-10-02T12:57:02.022+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='main' AIRFLOW_CTX_TASK_ID='run_pyspark_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-10-02T12:57:00.597585+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-10-02T12:57:00.597585+00:00'
+[2025-10-02T12:57:02.023+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-10-02T12:57:07.037+0000] {logging_mixin.py:188} INFO - +-------+-------+
+|column1|column2|
++-------+-------+
+|      1|    cat|
++-------+-------+
+[2025-10-02T12:57:07.412+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-10-02T12:57:07.414+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-10-02T12:57:07.422+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=main, task_id=run_pyspark_postgres, run_id=manual__2025-10-02T12:57:00.597585+00:00, execution_date=20251002T125700, start_date=20251002T125701, end_date=20251002T125707
+[2025-10-02T12:57:07.471+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-10-02T12:57:07.486+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-10-02T12:57:07.489+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
