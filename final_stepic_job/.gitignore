@@ -2,4 +2,4 @@ tmp*
 jars*
 .venv*
 .idea*
-logs*
+/logs/
